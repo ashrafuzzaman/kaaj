@@ -72,7 +72,7 @@ After the install process is over, you'll be able to run your application using 
 $ grunt
 ```
 
-Your application should run on the 3000 port so in your browser just go to [http://localhost:3000](http://localhost:3000)
+Your application should run on the 3001 port so in your browser just go to [http://localhost:3001](http://localhost:3001)
                             
 That's it! your application should be running by now, to proceed with your development check the other sections in this documentation. 
 If you encounter any problem try the Troubleshooting section.
@@ -91,13 +91,13 @@ $ fig up
 ```bash
 $ docker build -t mean .
 $ docker run -p 27017:27017 -d --name db mongo
-$ docker run -p 3000:3000 --link db:db_1 mean
+$ docker run -p 3001:3001 --link db:db_1 mean
 $
 ```
 
 * To enable live reload forward 35729 port and mount /app and /public as volumes:
 ```bash
-$ docker run -p 3000:3000 -p 35729:35729 -v /Users/mdl/workspace/mean-stack/mean/public:/home/mean/public -v /Users/mdl/workspa/mean-stack/mean/app:/home/mean/app --link db:db_1 mean
+$ docker run -p 3001:3001 -p 35729:35729 -v /Users/mdl/workspace/mean-stack/mean/public:/home/mean/public -v /Users/mdl/workspa/mean-stack/mean/app:/home/mean/app --link db:db_1 mean
 ```
 
 ## Getting Started With MEAN.JS
