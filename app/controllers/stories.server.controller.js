@@ -72,7 +72,7 @@ exports.delete = function(req, res) {
 /**
  * List of Stories
  */
-exports.list = function(req, res) { Story.find().sort('-created').
+exports.list = function(req, res) { Story.find().sort('-created').limit(20).
 	populate('user', 'displayName').exec(function(err, stories) {
 		if (err) {
 			return res.status(400).send({
